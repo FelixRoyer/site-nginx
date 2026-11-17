@@ -1,0 +1,9 @@
+name: site-ngnx
+
+services:
+  web:
+    build: .
+    image: site-nginx:latest
+    container_name: site-nginx
+    ports:
+      - "8081:80"
