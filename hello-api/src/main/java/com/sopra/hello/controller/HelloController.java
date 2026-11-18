@@ -13,6 +13,6 @@ public class HelloController {
     // GET /api/hello?name=Felix -> "Hello Felix !"
     @GetMapping("/hello")
     public String hello(@RequestParam(defaultValue = "World") String name) {
-        return "Hello " + name + " !";
+        return "Bonjour " + name + " !";
     }
 }

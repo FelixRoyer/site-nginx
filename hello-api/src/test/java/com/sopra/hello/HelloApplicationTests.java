@@ -21,13 +21,13 @@ class HelloApplicationTests {
     void helloParDefaut() throws Exception {
         mockMvc.perform(get("/api/hello"))
                .andExpect(status().isOk())
-               .andExpect(content().string("Hello World !"));
+               .andExpect(content().string("Bonjour World !"));
     }
 
     @Test
     void helloAvecNom() throws Exception {
         mockMvc.perform(get("/api/hello").param("name", "Felix"))
                .andExpect(status().isOk())
-               .andExpect(content().string("Hello Felix !"));
+               .andExpect(content().string("Bonjour Felix !"));
     }
 }
