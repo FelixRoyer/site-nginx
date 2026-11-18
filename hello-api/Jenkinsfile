@@ -1,0 +1,12 @@
+pipeline {
+    agent any
+    stages {
+        stage('Build & Run') {
+            steps {
+                dir('hello-api') {
+                    sh 'docker compose up -d --build'
+                }
+            }
+        }
+    }
+}

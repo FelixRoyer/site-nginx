@@ -1,0 +1,10 @@
+name: hello-api
+
+services:
+  hello:
+    build: .
+    image: hello-api
+    container_name: hello-api
+    ports:
+      - "8082:8080"
+    restart: unless-stopped
